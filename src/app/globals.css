@@ -145,9 +145,9 @@ a {
 
 .keys {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 1rem 2rem;
   color: var(--color-white);
 }
 
@@ -158,8 +158,20 @@ a {
   border: 1px solid transparent;
 }
 
+.unlock-rewards span {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.key span {
+  font-size: 15px;
+  font-weight: bold;
+}
+
 .key-icon {
   margin-right: 0.3rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
 }
 
 .spin-container {
@@ -170,7 +182,7 @@ a {
   align-items: center;
 }
 .spin-icon {
-  margin-top: 2rem;
+  margin-top: 1rem;
   animation: glow 10s infinite alternate;
 }
 
@@ -187,6 +199,7 @@ a {
   border: 1px solid transparent;
   border-radius: 10px;
 }
+
 .spin-cool {
   background-color: var(--color-darkgold);
   width: 100%;
@@ -245,4 +258,62 @@ a {
   font-size: 12px;
   font-weight: 600;
   color: var(--color-gray);
+}
+
+
+/* Referral page style */
+.invite-rule {
+  border-top: 1px solid var(--color-gray);
+  border-bottom: 1px solid var(--color-gray);
+  margin-top: 5rem;
+  font-weight: 600;
+  padding: 0px 1.5rem;
+}
+.inviterule-card {
+  border-left: 1px solid var(--color-gray);
+  border-right: 1px solid var(--color-gray);
+}
+.text-card {
+  text-align: center;
+  padding: 1rem;
+}
+.invite-rule p {
+  margin-top: 0.5rem;
+  color: var(--color-gray);
+  font-size: 14px;
+}
+.highlight {
+  color: var(--color-white);
+}
+.invite-rewards {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-gray);
+  padding: 1rem;
+}
+.invite-points span {
+  margin-right: 0.5rem;
+}
+.invite-button {
+  padding: 0 1.5rem;
+  margin-top: 3rem;
+}
+.invite-button button {
+  padding: 0.8rem 0;
+  border-radius: 0.5rem;
+}
+.invitebtn-first {
+  width: 82%;
+  margin-right: 2%;
+  background-color: var(--color-gold);
+  border: none;
+}
+.invitebtn-first span {
+  font-weight: bold;
+  font-size: 15px;
+}
+.invitebtn-second {
+  width: 16%;
+  background-color: transparent;
+  border: 1px solid var(--color-gray);
 }

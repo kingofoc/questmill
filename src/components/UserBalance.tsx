@@ -3,18 +3,12 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 const coinImage = "/assets/coin.png";
-const keyIcon = "/assets/key.svg";
-const silverKeyIcon = "/assets/silver-key.svg";
-const diamondKeyIcon = "/assets/diamond-key.svg";
 const platinumKeyIcon = "/assets/platinum-key.svg";
 
 export default function UserBalance () {
     const [airdrop, setAirdrop] = useState<number[]>([589480]);
     const [points, setPoints] = useState<number[]>([50300000]);
-    const [silverKey, setSilverKey] = useState<number[]>([10]);
-    const [goldKey, setGoldKey] = useState<number[]>([2]);
-    const [diamondKey, setDiamondKey] = useState<number[]>([4]);
-    const [platinumKey, setPlatinumKey] = useState<number[]>([1]);
+    const [platinumKey, setPlatinumKey] = useState<number[]>([500]);
 
     useEffect (() => {
         const fetchData = async () => {
@@ -24,9 +18,6 @@ export default function UserBalance () {
 
                 setAirdrop(result.map((item: { airdrop: number }) => item.airdrop));
                 setPoints(result.map((item: { points: number }) => item.points));
-                setSilverKey(result.map((item: { silverKey: number }) => item.silverKey)); 
-                setGoldKey(result.map((item: { goldKey: number }) => item.goldKey));
-                setDiamondKey(result.map((item: { diamondKey: number }) => item.diamondKey));
                 setPlatinumKey(result.map((item: { platinumKey: number }) => item.platinumKey));
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -72,34 +63,13 @@ export default function UserBalance () {
 
                 <div className="keys">
                     <button className="unlock-rewards">
-                        <span>Unlock Points</span>
+                        <span>Unlock Points:</span>
                     </button>
-
-                    {silverKey.map((silverKey, index) => (
-                        <div key={index} className="key">
-                            <Image className="silver-key key-icon" src={silverKeyIcon} alt="" width={12} height={12} />
-                            <span>{silverKey}</span>
-                        </div>
-                    ))}
-
-                    {goldKey.map((goldKey, index) => (
-                        <div key={index} className="key">
-                            <Image className="gold-key key-icon" src={keyIcon} alt="" width={12} height={12} />
-                            <span>{goldKey}</span>
-                        </div>
-                    ))}
-
-                    {diamondKey.map((diamondKey, index) => (
-                        <div key={index} className="key">
-                            <Image className="diamond-key key-icon" src={diamondKeyIcon} alt="" width={12} height={12} />
-                            <span>{diamondKey}</span>
-                        </div>
-                    ))}
 
                     {platinumKey.map((platinumKey, index) => (
                         <div key={index} className="key">
-                            <Image className="platinum-key key-icon" src={platinumKeyIcon} alt="" width={12} height={12} />
                             <span>{platinumKey}</span>
+                            <Image className="platinum-key key-icon" src={platinumKeyIcon} alt="" width={15} height={15} />
                         </div>
                     ))}
                 </div>
