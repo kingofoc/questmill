@@ -8,7 +8,7 @@ const platinumKeyIcon = "/assets/platinum-key.svg";
 export default function UserBalance () {
     const [airdrop, setAirdrop] = useState<number[]>([589480]);
     const [points, setPoints] = useState<number[]>([50300000]);
-    const [platinumKey, setPlatinumKey] = useState<number[]>([500]);
+    const [platinumKey, setPlatinumKey] = useState<number[]>([587]);
 
     useEffect (() => {
         const fetchData = async () => {
@@ -68,8 +68,10 @@ export default function UserBalance () {
 
                     {platinumKey.map((platinumKey, index) => (
                         <div key={index} className="key">
+                            <div className="key-card">
+                                <Image className="platinum-key key-icon" src={platinumKeyIcon} alt="" width={15} height={15} />
+                            </div>
                             <span>{platinumKey}</span>
-                            <Image className="platinum-key key-icon" src={platinumKeyIcon} alt="" width={15} height={15} />
                         </div>
                     ))}
                 </div>

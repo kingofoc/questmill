@@ -37,13 +37,6 @@ header {
   padding: 1rem 1.5rem;
 }
 
-svg {
-  width: 24px;
-  height: 24px;
-  margin: 0 0.5rem;
-  filter: brightness(0) invert(1);
-}
-
 a {
   text-decoration: none;
 }
@@ -95,7 +88,7 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   border-bottom: 1px solid var(--color-gray);
 }
 
@@ -109,6 +102,7 @@ a {
   font-size: 18px;
   color: var(--color-white);
   vertical-align: middle;
+  font-weight: bold;
 }
 
 .balance-title {
@@ -162,16 +156,23 @@ a {
   font-weight: bold;
   font-size: 15px;
 }
-
-.key span {
-  font-size: 15px;
-  font-weight: bold;
+.key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.key-icon {
+.key-card {
+  border: 1px solid var(--color-gray);
+  padding: 0.3rem;
   margin-right: 0.3rem;
-  margin-left: 0.5rem;
+  border-radius: 0.3rem;
+  background-color: var(--color-gold);
+}
+.key-icon {
   vertical-align: middle;
+}
+.key span {
+  font-size: 18px;
 }
 
 .spin-container {
@@ -193,11 +194,15 @@ a {
 .spin-button {
   background: var(--color-gold);
   width: 100%;
-  padding: 1rem;
+  padding: 1.2rem;
   margin-top: 2rem;
   font-weight: 600;
   border: 1px solid transparent;
   border-radius: 10px;
+}
+.spin-button span {
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .spin-cool {
@@ -292,18 +297,18 @@ a {
   padding: 1rem;
 }
 .invite-points span {
-  margin-right: 0.5rem;
+  margin-left: 0.3rem;
 }
 .invite-button {
   padding: 0 1.5rem;
   margin-top: 3rem;
 }
 .invite-button button {
-  padding: 0.8rem 0;
+  padding: 1.2rem 0;
   border-radius: 0.5rem;
 }
 .invitebtn-first {
-  width: 82%;
+  width: 80%;
   margin-right: 2%;
   background-color: var(--color-gold);
   border: none;
@@ -313,7 +318,7 @@ a {
   font-size: 15px;
 }
 .invitebtn-second {
-  width: 16%;
+  width: 18%;
   background-color: transparent;
   border: 1px solid var(--color-gray);
 }
