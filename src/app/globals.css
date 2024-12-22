@@ -64,6 +64,11 @@ a {
   padding: 0.1rem;
 }
 
+.usercard-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .usercard-icon {
   margin-left: 1rem;
 }
@@ -137,33 +142,13 @@ a {
   }
 }
 
-.keys {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  color: var(--color-white);
-}
-
-.unlock-rewards {
-  color: var(--color-darkgold);
-  background-color: transparent;
-  outline: none;
-  border: 1px solid transparent;
-}
-
-.unlock-rewards span {
-  font-weight: bold;
-  font-size: 15px;
-}
 .key {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .key-card {
-  border: 1px solid var(--color-gray);
-  padding: 0.3rem;
+  padding: 0.2rem 0.5rem;
   margin-right: 0.3rem;
   border-radius: 0.3rem;
   background-color: var(--color-gold);
@@ -172,7 +157,7 @@ a {
   vertical-align: middle;
 }
 .key span {
-  font-size: 18px;
+  font-size: 12px;
 }
 
 .spin-container {

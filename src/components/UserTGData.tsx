@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import UserKeys from "./UserKeys";
 
 const statsIcon = "/assets/stats.svg";
 const walletIcon = "/assets/wallet.svg";
@@ -39,7 +40,9 @@ export default function UserTGData () {
                 {user.photoUrl && <Image className="user-photo" src={user.photoUrl} alt=""/>}
                 <p>{user.username}</p>
             </div>
+
             <div className="usercard-icon-container">
+                <UserKeys />
                 <Image className="usercard-icon" src={statsIcon} alt="" width={24} height={24} />
                 <Image className="usercard-icon" src={walletIcon} alt="" width={24} height={24} />
             </div>

@@ -60,21 +60,6 @@ export default function UserBalance () {
                         </div>
                     ))}
                 </div>
-
-                <div className="keys">
-                    <button className="unlock-rewards">
-                        <span>Unlock Points:</span>
-                    </button>
-
-                    {platinumKey.map((platinumKey, index) => (
-                        <div key={index} className="key">
-                            <div className="key-card">
-                                <Image className="platinum-key key-icon" src={platinumKeyIcon} alt="" width={15} height={15} />
-                            </div>
-                            <span>{platinumKey}</span>
-                        </div>
-                    ))}
-                </div>
             </div>
         </div>
     )
