@@ -7,6 +7,10 @@ const coinImage = "/assets/coin.png";
 export default function UserBalance () {
     const [airdrop, setAirdrop] = useState<number[]>([589480]);
     const [points, setPoints] = useState<number[]>([50300000]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 02c39fa92e6bb50a24036b2a8589cd3f9632260c
     useEffect (() => {
         const fetchData = async () => {
             try {
