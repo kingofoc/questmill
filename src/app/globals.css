@@ -261,6 +261,7 @@ a {
 .inviterule-card {
   border-left: 1px solid var(--color-gray);
   border-right: 1px solid var(--color-gray);
+  background-color: #ffffff07;
 }
 .text-card {
   text-align: center;
