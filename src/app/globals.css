@@ -77,7 +77,7 @@ a {
 .user-balance {
   border-top: 1px solid var(--color-gray);
   border-bottom: 1px solid var(--color-gray);
-  font-size: 12px;
+  font-size: 13px;
   padding: 0 1.5rem;
   margin-top: 1rem;
   font-weight: 600;
@@ -87,14 +87,14 @@ a {
 .balance-card {
   border-left: 1px solid var(--color-gray);
   border-right: 1px solid var(--color-gray);
+  background-color: #ffffff07;
 }
 
 .balance-box {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--color-gray);
+  padding: 2rem 0;
 }
 
 .airdrop, .points {
@@ -104,14 +104,14 @@ a {
 
 .airdrop span,
 .points span {
-  font-size: 18px;
+  font-size: 21px;
   color: var(--color-white);
   vertical-align: middle;
   font-weight: bold;
 }
 
 .balance-title {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.8rem;
 }
 
 .coin-image {
@@ -201,34 +201,33 @@ a {
 }
 
 .reward-display {
-  background-color: var(--color-black);
-  color: var(--color-gold);
-  font-size: 10px;
+  width: 90%;
+  background-color: var(--color-gold);
+  color: var(--color-black);
+  font-size: 15px;
   font-weight: bold;
+  text-align: center;
   opacity: 0;
   transition: opacity 0.5s;
   position: absolute;
-  top: 70px;
-  left: 35%;
-  padding: 0.5rem 2rem;
+  top: -250px;
+  left: 5%;
+  padding: 1.2rem;
   border-radius: 10px;
 }
 
 .float-reward {
-  animation: float 2s forwards;
+  animation: float 3s forwards;
 }
 
 @keyframes float {
   0% {
     opacity: 1;
-    transform: translateY(100px);
-  }
-  50% {
-    transform: translateY(-20px);
+    transform: translateY(80px);
   }
   100% {
     opacity: 0;
-    transform: translateY(-40px);
+    transform: translateY(100px);
   }
 }
 
@@ -306,4 +305,40 @@ a {
   width: 18%;
   background-color: transparent;
   border: 1px solid var(--color-gray);
+}
+
+/* airdrop page style*/
+.airdrop-header {
+  text-align: center;
+  padding: 1rem;
+}
+.airdrop-header p {
+  margin: 0.7rem 0;
+  color: var(--color-gray);
+  font-weight: bold;
+}
+.airdrop-info {
+  padding: 2rem;
+  border-top: 1px solid var(--color-gray);
+  border-bottom: 1px solid var(--color-gray);
+  text-align: center;
+}
+.airdrop-info p {
+  margin-top: 1rem;
+}
+.withdraw {
+  padding: 2rem;
+}
+.withdraw-btn {
+  width: 100%;
+  padding: 1.2rem;
+  border: 1px solid var(--color-gray);
+  border-radius: 0.5rem;
+  background-color: var(--color-black);
+  outline: none;
+}
+.withdraw-btn span {
+  color: var(--color-gray);
+  font-weight: bold;
+  font-size: 20px;
 }

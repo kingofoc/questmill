@@ -3,13 +3,10 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 const coinImage = "/assets/coin.png";
-const platinumKeyIcon = "/assets/platinum-key.svg";
 
 export default function UserBalance () {
     const [airdrop, setAirdrop] = useState<number[]>([589480]);
     const [points, setPoints] = useState<number[]>([50300000]);
-    const [platinumKey, setPlatinumKey] = useState<number[]>([587]);
-
     useEffect (() => {
         const fetchData = async () => {
             try {
@@ -18,7 +15,6 @@ export default function UserBalance () {
 
                 setAirdrop(result.map((item: { airdrop: number }) => item.airdrop));
                 setPoints(result.map((item: { points: number }) => item.points));
-                setPlatinumKey(result.map((item: { platinumKey: number }) => item.platinumKey));
             } catch (error) {
                 console.error('Error fetching data:', error);
             }

@@ -5,18 +5,18 @@ import React, { useState } from "react"
 const coinImage = "/assets/coin.png";
 
 const rewards: { [key: number]: string} = {
-    1: "10 Silver Keys",
-    2: "10,000 Points",
-    3: "2 Gold Keys",
-    4: "50,000 points",
-    5: "100,000 Points",
-    6: "1 Diamond Key",
-    7: "5 Silver keys",
-    8: "1000 points",
-    9: "500,000 Points",
-    10: "5 Gold Keys",
-    11: "10,000 Points",
-    12: "2 Diamond Keys",
+    1: "10 Keys",
+    2: "10,000 QM Points",
+    3: "2 Keys",
+    4: "50,000 QM Points",
+    5: "100,000 QM Points",
+    6: "5 Keys",
+    7: "5 keys",
+    8: "1000 QM Points",
+    9: "500,000 QM Points",
+    10: "2 Keys",
+    11: "10,000 QM Points",
+    12: "50,000 QM Points",
 };
 
 export default function SpinCoin () {
@@ -27,14 +27,14 @@ export default function SpinCoin () {
 
     const generatedReward = () => {
 
-        if (spinCount < 12) {
+        if (spinCount < 6) {
             handleRotate();
             setTimeout(() => {
-                const randomNumber = Math.floor(Math.random() * 12) + 1;
+                const randomNumber = Math.floor(Math.random() * 6) + 1;
                 const handleAnimationEnd = () => {
                     setReward(rewards[randomNumber]);
                     setIsFloating(true);
-                    setTimeout(() => setIsFloating(false), 2000);
+                    setTimeout(() => setIsFloating(false), 3000);
                 };
 
                 handleAnimationEnd();
@@ -58,7 +58,7 @@ export default function SpinCoin () {
             </div>
             <div>
                 <button onClick={generatedReward} className={spinCount < 12 ? "spin-button" : "spin-cool"}>
-                    <span>{spinCount < 12 ? 'Spin to earn' : 'Next spin in 24:58:45'}</span>
+                    <span>{spinCount < 6 ? 'Spin to earn' : 'Next spin in 24:58:45'}</span>
                 </button>
             </div>
         </div>
