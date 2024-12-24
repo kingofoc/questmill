@@ -34,7 +34,7 @@ export default function SpinCoin () {
                 const handleAnimationEnd = () => {
                     setReward(rewards[randomNumber]);
                     setIsFloating(true);
-                    setTimeout(() => setIsFloating(false), 3000);
+                    setTimeout(() => setIsFloating(false), 2000);
                 };
 
                 handleAnimationEnd();
@@ -57,7 +57,7 @@ export default function SpinCoin () {
                 {reward}
             </div>
             <div>
-                <button onClick={generatedReward} className={spinCount < 12 ? "spin-button" : "spin-cool"}>
+                <button onClick={generatedReward} className={spinCount < 6 ? "spin-button" : "spin-cool"}>
                     <span>{spinCount < 6 ? 'Spin to earn' : 'Next spin in 24:58:45'}</span>
                 </button>
             </div>

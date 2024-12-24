@@ -3,7 +3,7 @@
   --color-black: #000000;
   --color-white: #FFFFFF;
   --color-gray: #5c5c5c;
-  --color-gold: #ffd700;
+  --color-main: #F75B00;
   --color-darkgold: #B8860B;
 }
 
@@ -59,7 +59,7 @@ a {
   height: 34px;
   width: 34px;
   border-radius: 20%;
-  border: 1px solid #a87900;
+  border: 1px solid var(--color-main);
   margin-right: 0.5rem;
   padding: 0.1rem;
 }
@@ -151,7 +151,7 @@ a {
   padding: 0.2rem 0.5rem;
   margin-right: 0.3rem;
   border-radius: 0.3rem;
-  background-color: var(--color-gold);
+  background-color: var(--color-main);
 }
 .key-icon {
   vertical-align: middle;
@@ -177,7 +177,7 @@ a {
 }
 
 .spin-button {
-  background: var(--color-gold);
+  background: var(--color-main);
   width: 100%;
   padding: 1.2rem;
   margin-top: 2rem;
@@ -186,23 +186,26 @@ a {
   border-radius: 10px;
 }
 .spin-button span {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
 }
 
 .spin-cool {
-  background-color: var(--color-darkgold);
+  background-color: var(--color-black);
+  color: var(--color-gray);
   width: 100%;
-  padding: 1rem;
+  padding: 1.2rem;
   margin-top: 2rem;
   font-weight: 600;
-  border: 1px solid transparent;
+  border: 1px solid var(--color-gray);
   border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .reward-display {
   width: 90%;
-  background-color: var(--color-gold);
+  background-color: var(--color-main);
   color: var(--color-black);
   font-size: 15px;
   font-weight: bold;
@@ -217,7 +220,7 @@ a {
 }
 
 .float-reward {
-  animation: float 3s forwards;
+  animation: float 2s forwards;
 }
 
 @keyframes float {
@@ -261,7 +264,7 @@ a {
 .inviterule-card {
   border-left: 1px solid var(--color-gray);
   border-right: 1px solid var(--color-gray);
-  background-color: #ffffff07;
+  background-color: #ffffff16;
 }
 .text-card {
   text-align: center;
@@ -295,12 +298,12 @@ a {
 .invitebtn-first {
   width: 80%;
   margin-right: 2%;
-  background-color: var(--color-gold);
+  background-color: var(--color-main);
   border: none;
 }
 .invitebtn-first span {
   font-weight: bold;
-  font-size: 15px;
+  font-size: 18px;
 }
 .invitebtn-second {
   width: 18%;
